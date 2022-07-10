@@ -14,7 +14,7 @@ const logger = winston.createLogger({
     new winston.transports.MongoDB({ 
          level: 'error',
          options :{ useUnifiedTopology: true },
-         db : 'mongodb+srv://jihed:jihed123@cluster0.nuhd6.mongodb.net/expresspro?retryWrites=true&w=majority',
+         db : process.env.DB_CONNECTION,
     }),
     
    //new winston.transports.Console({level: 'info'})

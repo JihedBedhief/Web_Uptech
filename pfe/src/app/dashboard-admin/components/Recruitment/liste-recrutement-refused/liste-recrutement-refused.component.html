@@ -1,0 +1,41 @@
+<div class="searchdiv">
+    <input type="text" placeholder="Search" class="searchbar" [(ngModel)]="data" />
+    <img src="../../../../assets/search-interface-symbol.png" alt="search icon" class="button" />
+  </div>
+  <div class="container" id="container">
+    <!-- <div class ="row">
+      <h5 class="text-danger">{{errorMessage}}</h5>
+    </div> -->
+    <div class="row">
+        <h1>Refused Recruitment Request</h1>
+        <table class="table table-hover" >
+            <thead>
+              <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Level Of Study</th>
+                <th scope="col">Birthday</th>
+                <!-- <th scope="col">Decision</th> -->
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr *ngFor="let recruitment of recruitments | filter:data ">
+                <td>{{recruitment.firstName}}</td>
+                <td>{{recruitment.lastName}}</td>
+                <td>{{recruitment.email}}</td>
+                <td>{{recruitment.levelOfStudy}}</td>
+                <td>{{recruitment.birthday}}</td>
+                <!-- <th>{{internship.decision}}</th> -->
+                <td>
+                    <!-- <button id="button" [routerLink]="['/admin/user_detail']" type="button" class="btn btn-outline-primary">Details</button> -->
+                    <a [routerLink]="['/admin/inReq_detail',recruitment._id]" ><img src="../../../../assets/detail.png" alt=""></a>
+                    <a (click)="deleteRecReq(recruitment._id)"><img src="../../../../assets/remove.png" alt="" ></a>
+                    <!-- <a (click)="archiveUser(user._id)"><img src="../../../../assets/block.png" alt="" ></a> -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

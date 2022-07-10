@@ -1,0 +1,192 @@
+.container{
+    margin-top: 100px;
+    width: 2000px;
+    height: 800px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 19px );
+    -webkit-backdrop-filter: blur( 19px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    /* max-width: 2000px; */
+}
+
+#model2login{
+    margin-left: 98px;
+    width: 367px;
+    height: 468px;
+    margin-top: 117px;
+    position: relative;
+    animation: imgmove 1s ease;
+}
+@keyframes imgmove  {
+    from {
+      opacity: 0;
+      left: 100px;
+    }
+    to {
+      opacity: 1;
+      left: 0px;
+    }
+  }
+
+#eclipseL{
+    margin-left: 316px;
+    margin-top: 10px;
+    position: relative;
+    animation: recmove 2s infinite;
+}
+
+#polygonL{
+    margin-left: -120px;
+    margin-top: -2px;
+    position: relative;
+    animation: recmove 2.5s infinite;
+}
+
+#rectangleL{
+    margin-left: 70px;
+    margin-top: 10px;
+    position: relative;
+    animation: recmove 3s infinite;
+}
+@keyframes recmove {
+    0%{
+        transform: translateY(0%);
+      }
+      25%{
+        transform: translateY(25%);
+      }
+      50%{
+        transform: translateY(0%);
+      }
+      75%{
+        transform: translateY(25%);
+      }
+      100%{
+        transform: translateY (0%);
+      }
+  }
+
+form{
+    margin-top: 200px;
+    margin-left: 80px;
+    position: relative;
+    animation: formmove 1s ease;
+}
+
+@keyframes formmove {
+    from {
+      opacity: 0;
+      left: -100px;
+    }
+    to {
+      opacity: 1;
+      left: 0px;
+    }
+  }
+
+.form-control{
+    background-color:transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 80px;
+    width: 410px;
+    color: white;
+    font-size: 24px;
+}
+
+#form{
+    height: 390px;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+
+  ::-webkit-scrollbar-thumb {
+    background: gray; 
+    border-radius: 10px;
+  }
+  
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: lime; 
+  } 
+
+label{
+    font-family: Arial Rounded MT;
+    font-size: 25px;
+    color: white;
+    opacity: 50%;
+}
+
+h1{
+    font-family: Arial Rounded MT;
+    color: white;
+    font-size: 60px;
+    margin-left: -79px;
+    width: 580px;
+}
+
+.btn-primary{
+    font-family: Arial Rounded MT;
+    width: 146px;
+    height: 50px;
+    background-color: lime;
+    border: none;
+    margin-left: 130px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+a{
+    text-decoration: none;
+    font-family: Arial Rounded MT;
+    color: white;
+    opacity: 50%;
+    margin-left: 203px;
+    font-size: 20px;
+    
+}
+
+textarea{
+    height: 135px;
+    width: 412px;
+    border-radius: 10px;
+    background-color: gray;
+    opacity: 0.5;
+    font-size: 20px;
+    margin-top: 22px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+select{
+    font-family: Arial Rounded MT;
+}
+
+option{
+    font-family: Arial Rounded MT;
+    color: black;
+}

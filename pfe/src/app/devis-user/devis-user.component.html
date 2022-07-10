@@ -1,0 +1,27 @@
+  <div class="container" id="container">
+    <a><button type="button" id="button" class="button"><span>Request</span></button></a>
+    <a><button type="button" id="button2" class="button" (click)="Export()"><span>Export</span></button></a>
+        <div class="row">
+            <table class="table table-hover" >
+                <thead>
+                  <tr>
+                    <th scope="col">Service Name</th>
+                    <!-- <th>Action</th> -->
+                  </tr>
+                </thead>
+                <tbody >
+                  <tr *ngFor="let categorie of categories | filter : data ">
+                    <td>
+                      {{categorie.name}} 
+                      <a (click)="deleteCategorie(categorie._id)"><img src="../../../../assets/remove.png" id="remove" alt="" ></a>
+                      <p>Price</p>
+                    </td>
+                  </tr>
+                </tbody>
+                <div>
+                  <h1>Total</h1>
+                  <p id="total">price</p>
+                </div>
+              </table>  
+      </div>
+</div>

@@ -1,0 +1,102 @@
+<div class="container" id="container">
+    <div id="p">
+        <p>Welcome {{ user.name }} {{ user.FamilyName }} to <span>Web Uptech</span></p>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <!-- <img src="assets/fedy.png" id="model1" alt="model1"> -->
+            <img src='{{imgDirectoryPath}}{{user.file}}' crossorigin="anonymous" id="model1" alt="model1" >
+        </div>
+        <div class="col-6" id="b">  
+            <div class="info">
+                <p>{{ user.FamilyName }}</p>
+                <p>{{ user.name }}</p>
+                <p>{{ user.email }}</p>
+                <p>{{ user.PhoneNumber }}</p>
+            </div>
+            <!-- [routerLink]="['update_user',user._id]" -->
+            <a [routerLink]="['update_user',user._id]" ><button type="button" class="button"><span>Update Profile</span></button></a>
+            <!-- <a routerLink="/update_user"><button type="button" class="button"><span>Update Profile</span></button></a> -->
+            <a><button type="button" class="button" routerLink="/devis" data-bs-toggle="modal" data-bs-target="#exampleModal"><span>Devi</span></button></a>
+            
+        </div>
+    </div>
+    
+    <section class="card-list">
+            <article class="card" routerLink="/services">
+                <header class="card-header">
+                <img src="assets/sysinfo-removebg-preview.png"alt="">
+                </header>
+                <div class="card-author">
+                    <a class="author-avatar" href="#">
+                        <img src="assets/Capture-removebg-preview (7).png"alt="">
+                    </a>
+                    <div class="author-name">
+                        <div class="author-name-prefix">IT System</div>
+                    </div>
+                </div>
+            </article>
+            <article class="card" routerLink="/dev_services">
+            <header class="card-header">
+                <img src="assets/Marketing-removebg-preview.png"alt="">
+            </header>
+            <div class="card-author">
+                <a class="author-avatar" href="#">
+                    <img src="assets/Capture-removebg-preview (7).png"alt="">
+                </a>
+                <div class="author-name">
+                    <div class="author-name-prefix">Development</div>
+                </div>
+            </div>
+            </article>
+            <article class="card" routerLink="/marketing_services">
+            <header class="card-header">
+                <img src="assets/dev-removebg-preview.png"alt="">
+            </header>
+            <div class="card-author">
+                <a class="author-avatar" href="#">
+                    <img src="assets/Capture-removebg-preview (7).png"alt="">
+                </a>
+                <div class="author-name">
+                    <div class="author-name-prefix">Digital marketing & Design</div>
+                </div>
+            </div>
+            </article>
+    </section>
+    <router-outlet></router-outlet>
+</div>
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="col-6" id="formC">
+                <main class="form-signin">
+                    <form >
+                      <h1 class="h3 mb-3 fw-normal">Update</h1>
+                      <div id="form">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="name" [(ngModel)]="user.name" id="floatingPassword" placeholder="name@gmail.com">
+                                <label for="floatingPassword">Name</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control"  name="FamilyName" [(ngModel)]="user.FamilyName" id="floatingPassword" placeholder="name@gmail.com">
+                                <label for="floatingPassword">Family name</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="number" class="form-control" name="PhoneNumber" [(ngModel)]="user.PhoneNumber" id="floatingPassword" placeholder="name@gmail.com">
+                                <label for="floatingPassword">Phone number</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="email" class="form-control" name="email" [(ngModel)]="user.email"  id="floatingPassword" placeholder="name@gmail.com">
+                                <label for="floatingPassword">Email</label>
+                            </div>
+                      </div>
+                      <button class=" btn btn-lg btn-primary" type="submit" >Update</button>
+                    </form>
+                </main> 
+            </div>
+        </div>
+    </div>
+</div> -->
+
+

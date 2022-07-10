@@ -1,0 +1,69 @@
+<div class="searchdiv">
+  <input type="text" placeholder="Search" class="searchbar" [(ngModel)]="data" />
+  <img src="../../../../assets/search-interface-symbol.png" alt="search icon" class="button" />
+</div>
+<div class="container" id="container">
+      <div class="row">
+          <h1>List Categorie</h1>
+          <table class="table table-hover" >
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Categorie Name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody >
+                <tr *ngFor="let categorie of categories | filter : data ">
+                  <th scope="row">id</th>
+                  <td>{{categorie.name}}</td>
+                  <td>
+                      <!-- <button id="button" [routerLink]="['/admin/user_detail']" type="button" class="btn btn-outline-primary">Details</button> -->
+                      <!-- <a [routerLink]="['/admin/user_detail',user._id]" ><img src="../../../../assets/detail.png" alt=""></a> -->
+                      <a (click)="deleteCategorie(categorie._id)"><img src="../../../../assets/remove.png" alt="" ></a>
+                      <a  [routerLink]="['/admin/update_categorie',categorie._id]" ><img src="../../../../assets/loop.png" alt="" ></a>                  </td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+</div>
+<button id="button" type="button" class="btn" [routerLink]="['/admin/add_categorie']" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+  </svg>
+</button>
+
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="col-6" id="formC">
+        <main class="form-signin">
+            <form>
+              <h1 class="h3 mb-3 fw-normal">Add Categorie</h1>
+              <div id="form">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" formControlName="name"  id="floatingPassword" placeholder="name@gmail.com">
+                        <label for="floatingPassword">Name</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" class="form-control"  formControlName="FamilyName"  id="floatingPassword" placeholder="name@gmail.com">
+                        <label for="floatingPassword">Family name</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" class="form-control" formControlName="PhoneNumber" id="floatingPassword" placeholder="name@gmail.com">
+                        <label for="floatingPassword">Phone number</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="email" class="form-control" formControlName="email"  id="floatingPassword" placeholder="name@gmail.com">
+                        <label for="floatingPassword">Email</label>
+                    </div>
+              </div>
+              <button class="btn btn-lg btn-primary" type="submit" >Add Categorie</button>
+            </form>
+        </main>
+    </div>
+    </div>
+  </div>
+</div> -->

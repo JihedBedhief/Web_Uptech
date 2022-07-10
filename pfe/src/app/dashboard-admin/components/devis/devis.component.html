@@ -1,0 +1,31 @@
+<div class="searchdiv">
+    <input type="text" placeholder="Search" class="searchbar" [(ngModel)]="data" />
+    <img src="../../../../assets/search-interface-symbol.png" alt="search icon" class="button" />
+  </div>
+  <div class="container" id="container">
+        <div class="row">
+            <h1>List Devis</h1>
+            <table class="table table-hover" >
+                <thead>
+                  <tr>
+                    <th scope="col">User</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Services</th>
+                    <th scope="col">Total</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody >
+                  <tr *ngFor="let devis of deviss | filter : data ">
+                    <td>{{devis.user.name}}</td>
+                    <td>{{devis.user.email}}</td>
+                    <td><textarea name="" id="" cols="30" rows="10" disabled>{{devis.services}}</textarea></td>
+                    <td>{{devis.total}}</td>
+                    <td>
+                        <a (click)="deleteDevis(devis._id)"><img src="../../../../assets/remove.png" alt="" ></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+  </div>

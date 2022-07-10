@@ -1,0 +1,46 @@
+<div class="searchdiv">
+  <input type="text" placeholder="Search" class="searchbar" [(ngModel)]="data" />
+  <img src="../../../../assets/search-interface-symbol.png" alt="search icon" class="button" />
+</div>
+<div class="container" id="container">
+    <div class="row">
+        <h1>List User Request</h1>
+        <table class="table ">
+            <thead>
+              <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">email</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <tr *ngFor="let user of users | filter:data ">
+                  <td>{{user.name}}</td>
+                  <td>{{user.FamilyName}}</td>
+                  <td>{{user.PhoneNumber}}</td>
+                  <td>{{user.email}}</td>
+                <td>
+                    <!-- <button id="button" type="button" class="btn btn-outline-success">Accept</button> -->
+                    <!-- <button id="button" type="button" class="btn btn-outline-danger">Refuse</button> -->
+                    <!-- <button id="button" type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button> -->
+                    <img src="../../../../assets/correct.png" alt="" (click)="acceptUser(user._id )">
+                    <img src="../../../../assets/remove.png" alt="" (click)="refuseUser(user._id )">
+                    <a [routerLink]="['/admin/user_detail',user._id]"  data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="../../../../assets/detail.png" alt=""></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+        <app-user-detail></app-user-detail>
+  </div>
+</div> -->
+
+

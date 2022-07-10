@@ -1,0 +1,57 @@
+<div class="container">
+    <a class="nav-link" routerLink="/admin" id="a" aria-current="page">
+        <img src='{{imgDirectoryPath}}{{user.file}}' crossorigin="anonymous" id="model1" alt="model1" >
+    </a>
+    <div class="row">
+        <div class="col-xs-12" id="information">
+            <div class="row" >
+                <div class="col-6" id="p">
+                    <div class="side" id="information">
+                        <ul>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" id="a" data-bs-toggle="dropdown" aria-expanded="false">Users</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                    <ul class="megamenu dropdown rounded">
+                                        <li><a id="a" [routerLink]="['/admin/user_liste_request']" >Users Request</a></li>
+                                        <li><a id="a" [routerLink]="['/admin/user_liste']">Users List</a></li>
+                                        <li><a id="a" [routerLink]="['/admin/user_liste_refused']">Refused Users</a></li>
+                                        <li><a id="a" [routerLink]="['/admin/user_liste_archived']">Archived Users</a></li>
+                                    </ul>   
+                                </ul>    
+                            </li>
+                            <li><a id="a" [routerLink]="['/admin/contact_list']">Contact List</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" id="a" data-bs-toggle="dropdown" aria-expanded="false">Internship</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                    <ul class="megamenu dropdown rounded">
+                                        <li><a id="a" [routerLink]="['/admin/internship_list']">Internship Request</a></li>
+                                        <li><a id="a" [routerLink]="['/admin/accepted_in_req']">Accepted InRequest</a></li>
+                                        <li><a id="a" [routerLink]="['/admin/refused_in_req']">Refused InRequest</a></li>
+                                    </ul>   
+                                </ul>    
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" id="a" data-bs-toggle="dropdown" aria-expanded="false">Recruitment</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                                    <ul class="megamenu dropdown rounded">
+                                        <li><a id="a" [routerLink]="['/admin/liste_rec_req']">Recruitment Request</a></li>
+                                        <li><a id="a" [routerLink]="['/admin/accepted_rec_req']">Accepted RecRequest</a></li>
+                                        <li><a id="a" [routerLink]="['/admin/refused_rec_req']">Refused RecRequest</a></li>
+                                    </ul>   
+                                </ul>    
+                            </li>
+                            <li><a id="a" [routerLink]="['/admin/devis']">Devi Request</a></li>
+                            <li><a id="a" [routerLink]="['/admin/liste_categorie']">List Categorie</a></li>
+                            <li><a id="a" [routerLink]="['/admin/liste_services']">List Services</a></li>
+                        </ul>
+                    </div>                    
+                    <div class="col-xs-12" id="content" ngSwitch="">
+                        <router-outlet></router-outlet>                
+                    </div>
+                </div>
+
+            </div>                
+
+        </div>
+    </div>
+</div>

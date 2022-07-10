@@ -1,0 +1,40 @@
+<div class="container">
+    <!-- <button id="modalClose" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+    <div class="col-6" id="formC">
+        <main class="form-signin">
+            <form [formGroup]="Services" >
+              <h1 class="h3 mb-3 fw-normal">Add Service</h1>
+              <div id="form">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" formControlName="name" [(ngModel)]="services.name"  id="floatingPassword" placeholder="name" required>
+                        <label for="floatingPassword">Name</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" formControlName="title" [(ngModel)]="services.title"  id="floatingPassword" placeholder="name" required>
+                        <label for="floatingPassword">Title</label>
+                    </div>
+                    <div class="form-floating">
+                        <!-- <input type="text-area" class="form-control" formControlName="descreption" [(ngModel)]="services.descreption"  id="floatingPassword" placeholder="descreption"> -->
+                        <textarea formControlName="descreption" [(ngModel)]="services.descreption" id="" placeholder="description" cols="30" rows="10" required ></textarea>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" class="form-control" formControlName="prix" [(ngModel)]="services.prix" id="floatingPassword" placeholder="prix" required>
+                        <label for="floatingPassword">Service Price</label>
+                    </div>
+                    <div class="form-floating" >
+                        <select  class="form-control form-control-lg"  formControlName="categorie" [(ngModel)]="services.categorie" (change)="categorie($event)" required>
+                            <option selected="choisir votre Type" disabled="Level Of Study"></option>
+                            <option *ngFor="let categorie of categories">{{categorie.name}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-floating">
+                        <input type="file" class="form-control" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])" (change)="onFilePicked($event)">
+                    </div>
+              </div>
+              <button class="btn btn-lg btn-primary" type="submit" (click)="addServices()">Add</button>
+            </form>
+            <!-- [routerLink]="['/user_profile']" -->
+        </main>
+    </div>
+</div>

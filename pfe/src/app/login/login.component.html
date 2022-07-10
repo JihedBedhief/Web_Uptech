@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <img src="assets/Component 4 – 1.png" id="model2login" alt="model1">
+            <img src="assets/Ellipse 24.png" id="eclipseL" alt="">
+            <img src="assets/Polygon 1.png" id="polygonL" alt="">
+            <img src="assets/Rectangle 4.png" id="rectangleL" alt="">
+        </div>
+        <!-- <div class ="row">
+          <h5 class="text-danger">{{errorMessage}}</h5>
+        </div> -->
+        <div class="col-6" >
+            <main class="form-signin">
+                <form [formGroup]="Login">
+                  <!-- <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+                  <h1 class="h3 mb-3 fw-normal">Log in</h1>
+                  <div id="form"> -->
+                    <div class="form-floating">
+                      <input type="email"  class="form-control" id="floatingInput" formControlName="email" [(ngModel)]="user.email" placeholder="name@example.com">
+                      <label for="floatingInput">Email</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="password" class="form-control" id="floatingPassword" formControlName="password" [(ngModel)]="user.password" placeholder="Password">
+                      <label for="floatingPassword">Password</label>
+                      <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+                    </div>
+                  <button class=" btn btn-lg btn-primary" type="submit" (click)="login()">Log in</button>
+                </form>
+                <!-- <div class="alert alert-danger" *ngIf="dataRecived.isAdmin == true">
+                  Logged in as Admin.
+                </div> -->
+                <a routerLink="/sign_up">Create account ?</a>
+            </main>
+        </div>
+    </div>
+</div>

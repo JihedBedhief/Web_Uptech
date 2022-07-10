@@ -1,0 +1,10 @@
+{"level":"error","message":"check ur database server :MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/","timestamp":"2022-04-15T03:46:17.833Z"}
+{"level":"error","message":"check ur database server :MongoNetworkError: read ECONNRESET","timestamp":"2022-06-03T06:48:45.566Z"}
+{"level":"error","message":"check ur database server :Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nuhd6.mongodb.net","timestamp":"2022-06-09T00:20:46.559Z"}
+{"level":"error","message":"check ur database server :MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/","timestamp":"2022-06-09T19:00:34.190Z"}
+{"level":"error","message":"check ur database server :Error: queryTxt ETIMEOUT cluster0.nuhd6.mongodb.net","timestamp":"2022-06-09T19:29:55.444Z"}
+{"level":"error","message":"check ur database server :Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nuhd6.mongodb.net","timestamp":"2022-06-16T17:30:19.790Z"}
+{"level":"error","message":"check ur database server :Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nuhd6.mongodb.net","timestamp":"2022-06-16T17:30:31.627Z"}
+{"level":"error","message":"check ur database server :Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.nuhd6.mongodb.net","timestamp":"2022-06-20T04:06:52.898Z"}
+{"level":"error","message":"check ur database server :Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nuhd6.mongodb.net","timestamp":"2022-06-21T02:53:45.290Z"}
+{"level":"error","message":"check ur database server :Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.nuhd6.mongodb.net","timestamp":"2022-06-21T02:53:47.622Z"}

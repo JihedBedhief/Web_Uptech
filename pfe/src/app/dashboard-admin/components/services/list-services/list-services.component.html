@@ -1,0 +1,40 @@
+<div class="searchdiv">
+  <input type="text" placeholder="Search" class="searchbar" [(ngModel)]="data" />
+  <img src="../../../../assets/search-interface-symbol.png" alt="search icon" class="button" />
+</div>
+<div class="container" id="container">
+      <div class="row">
+          <h1>List Services</h1>
+          <table class="table table-hover" >
+              <thead>
+                <tr>
+                  <th scope="col">Service Name</th>
+                  <th scope="col">Decreption</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Categorie</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody >
+                <tr *ngFor="let services of services | filter: data ">
+                  <td>{{services.name}}</td>
+                  <td><textarea name="" id="" cols="30" rows="10" disabled>{{services.descreption}}</textarea></td>
+                  <td>{{services.prix}}</td>
+                  <td>{{services.categorie}}</td>
+                  <td>
+                      <!-- <button id="button" [routerLink]="['/admin/user_detail']" type="button" class="btn btn-outline-primary">Details</button> -->
+                      <!-- <a [routerLink]="['/admin/user_detail',services._id]" ><img src="../../../../assets/detail.png" alt=""></a> -->
+                      <a (click)="deleteServices(services._id)"><img src="../../../../assets/remove.png" alt="" ></a>
+                      <a  [routerLink]="['/admin/update_service',services._id]" ><img src="../../../../assets/loop.png" alt="" ></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+  </div>
+<button id="button" [routerLink]="['/admin/add_services']" type="button" class="btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+    </svg>
+</button>
+  

@@ -1,0 +1,110 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top ">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/"><img src="assets/Capture-removebg-preview (7).png" alt=""></a>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" id="a" aria-current="page" routerLink="/" >Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" id="a" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                <ul class="megamenu dropdown rounded">
+                    <li class="mega-title">
+                        <a id="servsys">Systeme Informatique</a>
+                        <ul>
+                            <li>
+                                <a id="servInfra" routerLink="/infrastructure">Infrastructure</a>
+                            </li>
+                            <li>
+                                <a id="servSecurite" routerLink="/security">Sécurité</a>
+                            </li>
+                            <li>
+                                <a id="servSysInfo" routerLink="information system">Systéme d'information</a>
+                            </li>
+                            <li>
+                                <a routerLink="/erp">ERP</a>
+                            </li>
+                            <li>
+                                <a id="servBd">Base de données</a>
+                            </li>
+                            <li>
+                                <a id="servCloud" routerLink="/cloud">Cloud</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mega-title">
+                        <a id="servDev">Développement</a>
+                        <ul>
+                            <li>
+                                <a routerLink="/web">Web</a>
+                            </li>
+                            <li>
+                                <a routerLink="/mobile">Mobile</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mega-title">
+                        <a id="servMark">Marketing Digital & Design</a>
+                        <ul>
+                            <li>
+                                <a routerLink="/community">Community management</a>
+                            </li>
+                            <li>
+                                <a id="servRef" routerLink="/referencement">Réferencement</a>
+                            </li>
+                            <li>
+                                <a routerLink="/email_marketing">E-mail marketing</a>
+                            </li>
+                            <li>
+                                <a routerLink="/mobile_marketing">Mobile maketing</a>
+                            </li>
+                            <li>
+                                <a routerLink="/design">Design</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mega-title"><a id="servRetailMark">Retail & Marketing</a>
+                        <ul>
+                            <li><a id="servRetail" href="#">Retail</a></li>
+                            <li><a id="servPub" href="#">Advertising</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " id="a" aria-current="page" routerLink="/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " id="a" aria-current="page" routerLink="/about" *ngIf="!user.isAdmin">About us</a>
+            <a class="nav-link " id="a" aria-current="page" routerLink="/admin" *ngIf="isLogin==true && user.isAdmin==true">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle"  href="#" id="dropdown01" data-bs-toggle="dropdown" id="a" aria-expanded="false"  *ngIf="isLogin==false" >Login</a>
+                <ul class="dropdown-menu" id="login_as" aria-labelledby="dropdown01"> 
+                   <ul>
+                       <li>
+                           <a id="servInfra" routerLink="/login" >Log in as user</a>
+                       </li>
+                       <li>
+                           <a id="servSecurite" routerLink="/login_enership">Log in as enership</a>
+                       </li>
+                   </ul>   
+                </ul>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" id="logout" aria-current="page" (click)="logout()" *ngIf="isLogin==true">Logout</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" routerLink="/user_profile" id="a" aria-current="page" *ngIf="isLogin==true && !user.isAdmin">
+                <img src='{{imgDirectoryPath}}{{user.file}}' crossorigin="anonymous" id="model1" alt="model1" >
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  

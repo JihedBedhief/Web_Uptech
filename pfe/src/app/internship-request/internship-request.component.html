@@ -1,0 +1,101 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <img src="assets/Component 8 – 11.png" id="model2login" alt="model1">
+            <img src="assets/Ellipse 24.png" id="eclipseL" alt="">
+            <img src="assets/Polygon 1.png" id="polygonL" alt="">
+            <img src="assets/Rectangle 4.png" id="rectangleL" alt="">
+        </div>
+        <div class="col-6" id="p">
+            <main class="form-signin">
+                <form [formGroup]="Inr">
+                    <h1 class="h3 mb-3 fw-normal">Internship request</h1>
+                      <div id="form">
+                          <div class="form-floating">
+                              <input type="text" class="form-control" formControlName="firstName" [(ngModel)]="internship.firstName" id="floatingInput" placeholder="first name">
+                              <label for="floatingInput">First Name</label>
+                          </div>
+                          <div class="form-floating">
+                              <input type="text" class="form-control" formControlName="lastName" [(ngModel)]="internship.lastName" id="floatingInput" placeholder="last name">
+                              <label for="floatingInput">Last Name</label>
+                          </div>
+                          <div class="form-floating">
+                              <input type="email" class="form-control" formControlName="Email" [(ngModel)]="internship.Email" id="floatingInput" placeholder="name@example.com">
+                              <label for="floatingInput">Email</label>
+                          </div>
+                          <div class="form-floating">
+                              <input type="number" class="form-control" formControlName="tel" [(ngModel)]="internship.tel" id="floatingPassword" placeholder="phone number">
+                              <label>Phone number</label>
+                          </div>
+                          <div class="form-floating">
+                              <input type="date" class="form-control" formControlName="birthday" [(ngModel)]="internship.birthday" id="floatingPassword" placeholder="birthday">
+                              <label>Birthday</label>
+                          </div>
+                          <div class="form-floating">
+                              <input type="text" class="form-control" formControlName="adresse" [(ngModel)]="internship.adresse" id="floatingPassword" placeholder="adresse">
+                              <label>Adresse</label>
+                          </div>
+                          <div class="form-floating">
+                              <input type="text" class="form-control" formControlName="profilLinkedin" [(ngModel)]="internship.profilLinkedin" id="floatingPassword" placeholder="profil Linkedin">
+                              <label>Profil Linkedin</label>
+                          </div>
+
+                          <label>Level of Study</label>
+                            <select  class="form-control form-control-lg" formControlName="levelOfStudy" [(ngModel)]="internship.levelOfStudy" (change)="level($event)" >
+                                <option selected="choisir votre Type" disabled="Level Of Study"></option>
+                                <option value="lisence">lisence</option>
+                                <option value="master">master</option>
+                                <option value="ingineurie">ingineurie</option>
+                            </select>
+                            
+                        <!-- formControlName !!!!! 
+                             ngModel !!!!!!!
+                        -->
+                        <div class="form-floating">
+                            <input type="text" class="form-control" formControlName="University" [(ngModel)]="internship.University"  id="floatingPassword" placeholder="university">
+                            <label>University</label>
+                        </div>
+
+                        <!-- formControlName !!!!! 
+                             ngModel !!!!!!!
+                        -->
+                        <div class="form-floating">
+                            <input type="text" class="form-control" formControlName="Subsidiary" [(ngModel)]="internship.Subsidiary"  id="floatingPassword" placeholder="Subsidiary">
+                            <label>Subsidiary</label>
+                        </div>
+                          <div>
+                            <textarea name="message" id="message" formControlName="competences" [(ngModel)]="internship.competences" placeholder="your skills"></textarea>
+                          </div>
+                          <div class="form-floating">
+                              <input type="text" class="form-control" formControlName="certifcats" [(ngModel)]="internship.certifcats" id="floatingPassword" placeholder="certificats">
+                              <label>Certificats</label>
+                          </div>
+                          <div class="form-floating">
+                              <input type="text" class="form-control" formControlName="internshipDuration" [(ngModel)]="internship.internshipDuration" id="floatingPassword" placeholder="internship internship Duration">
+                              <label>Internship Duration</label>
+                          </div>
+                          <div class="form-floating">
+                            <input type="date" class="form-control" formControlName="startDate" [(ngModel)]="internship.startDate" id="floatingPassword" placeholder="startDate">
+                            <label>Start Date</label>
+                          </div>
+                          <div class="form-floating">
+                            <input type="date" class="form-control" formControlName="endDate" [(ngModel)]="internship.endDate" id="floatingPassword" placeholder="endDate">
+                            <label>End Date</label>
+                          </div>
+
+                        <!-- formControlName !!!!! 
+                             ngModel !!!!!!!
+                        -->
+                          <div class="form-floating">
+                                <!-- <input type="file" class="form-control" formControlName="InReqImg" [(ngModel)]="internship.InReqImg" id="floatingPassword" placeholder="image" (change)="onFilePicked($event)"> -->
+                                <input type="file" class="form-control" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])" (change)="onFilePicked($event)">
+                          </div>
+                          
+                      </div>
+                    <button class=" btn btn-lg btn-primary" type="submit" routerLink="/about" (click)="demander()">Send</button>
+                  
+                  </form>
+              </main>
+        </div>
+    </div>
+</div>

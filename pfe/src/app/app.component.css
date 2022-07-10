@@ -1,0 +1,83 @@
+.bgeclipse27{
+    position: absolute;
+    left: 310px;
+    top: 68px;
+    z-index: -1;
+}
+
+.bgeclipse26{
+    position: absolute;
+    left: 1032px;
+    top: 507px;
+    z-index: -1;
+}
+
+.bgeclipse25{
+    position: absolute;
+    left: 219px;
+    top: 300px;
+    z-index: -1;
+}
+
+.bgpolygon2{
+    position: absolute;
+    left: 459px;
+    top: 241px;
+    z-index: -1;
+}
+
+.bgpolygon3{
+    position: absolute;
+    left: 690px;
+    top: 93px;
+    z-index: -1;
+}
+
+.bgpolygon4{
+    position: absolute;
+    left: 605px;
+    top: 545px;
+    z-index: -1;
+}
+
+.bgrectangle7{
+    position: absolute;
+    left: 664px;
+    top: 323px;
+    z-index: -1;
+}
+
+.bgrectangle6{
+    position: absolute;
+    left: 837px;
+    top: 505px;
+    z-index: -1;
+}
+
+.bgrectangle5{
+    position: absolute;
+    left: 338px;
+    top: 570px;
+    z-index: -1;
+} */
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+
+  ::-webkit-scrollbar-thumb {
+    background: gray; 
+    border-radius: 10px;
+  }
+  
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: lime; 
+  }

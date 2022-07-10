@@ -1,0 +1,91 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <img src="assets/Component 8 – 1.png" id="model2login" alt="model1">
+            <img src="assets/Ellipse 24.png" id="eclipseL" alt="">
+            <img src="assets/Polygon 1.png" id="polygonL" alt="">
+            <img src="assets/Rectangle 4.png" id="rectangleL" alt="">
+        </div>
+        <div class="col-6" id="p">
+            <main class="form-signin">
+                <form [formGroup]="Rec">
+                  <h1 class="h3 mb-3 fw-normal">recruitment request</h1>
+                    <div id="form">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" formControlName="firstName" [(ngModel)]="recruitment.firstName" id="floatingInput" placeholder="first name">
+                            <label for="floatingInput">First Name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" formControlName="lastName" [(ngModel)]="recruitment.lastName" id="floatingInput" placeholder="last name">
+                            <label for="floatingInput">Last Name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" formControlName="email" [(ngModel)]="recruitment.email" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="number" class="form-control" formControlName="tel" [(ngModel)]="recruitment.tel" id="floatingPassword" placeholder="phone number">
+                            <label for="floatingPassword" >Phone number</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="date" class="form-control" formControlName="birthday" [(ngModel)]="recruitment.birthday" id="floatingPassword" placeholder="birthday">
+                            <label for="floatingPassword" >Birthday</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" formControlName="adresse" [(ngModel)]="recruitment.adresse" id="floatingPassword" placeholder="adresse">
+                            <label for="floatingPassword" >Adresse</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" formControlName="profilLinkedin" [(ngModel)]="recruitment.profilLinkedin" id="floatingPassword" placeholder="profil Linkedin">
+                            <label for="floatingPassword" >Profil Linkedin</label>
+                        </div>
+                        <!-- <div class="form-floating">
+                            <input type="text" class="form-control" formControlName="levelOfStudy" [(ngModel)]="recruitment.levelOfStudy" id="floatingPassword" placeholder="level of Study">
+                            <label for="floatingPassword" >Level Of Study</label>
+                        </div> -->
+                        <select  class="form-control form-control-lg"formControlName="levelOfStudy" [(ngModel)]="recruitment.levelOfStudy" (change)="level($event)" >
+                            <option selected="choisir votre Type" disabled="Level Of Study">Level Of Study</option>
+                            <option value="Lisence">Lisence</option>
+                            <option value="Master">Master</option>
+                            <option value="Ingineurie">Ingineurie</option>
+                        </select>
+
+                        <!-- formControlName !!!!! 
+                             ngModel !!!!!!!
+                        -->
+                        <div class="form-floating">
+                            <input type="text" class="form-control"  id="floatingPassword" placeholder="university">
+                            <label for="floatingPassword" >University</label>
+                        </div>
+
+                        <!-- formControlName !!!!! 
+                             ngModel !!!!!!!
+                        -->
+                        <div class="form-floating">
+                            <input type="text" class="form-control"  id="floatingPassword" placeholder="Subsidiary">
+                            <label for="floatingPassword" >Subsidiary</label>
+                        </div>
+
+                        <div class="form-floating">
+                            <input type="text" class="form-control" formControlName="speciality" [(ngModel)]="recruitment.speciality" id="floatingPassword" placeholder="speciality">
+                            <label for="floatingPassword" >Speciality</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" formControlName="experience" [(ngModel)]="recruitment.experience" id="floatingPassword" placeholder="experience">
+                            <label for="floatingPassword" >Experience</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" formControlName="desiredPosition" [(ngModel)]="recruitment.desiredPosition" id="floatingPassword" placeholder="desired Position">
+                            <label for="floatingPassword" >Desired Position</label>
+                        </div>
+                        <!-- <div>
+                            <textarea name="message" id="message" placeholder="your skills"></textarea>
+                        </div> -->
+                    </div>
+                  <button class=" btn btn-lg btn-primary" type="submit" routerLink="/about" (click)="demander()">Send</button>
+                
+                </form>
+              </main>
+        </div>
+    </div>
+</div>

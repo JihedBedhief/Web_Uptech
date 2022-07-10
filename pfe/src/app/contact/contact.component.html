@@ -1,0 +1,58 @@
+<div class="container" id="container">
+    <div class="row">
+        <div class="col-6">
+            <img src="assets/Component 20 – 1.png" id="model1" alt="model1">
+            <img src="assets/Ellipse 24.png" id="eclipseH" alt="">
+            <img src="assets/Polygon 1.png" id="polygonH" alt="">
+            <img src="assets/Rectangle 4.png" id="rectangleH" alt="">
+        </div>
+        <div class="col-6" id="formC">
+            <main class="form-signin">
+                <form [formGroup]="Contact">
+                <h1 class="h3 mb-3 fw-normal">Contact</h1>
+                <div id="form">
+                    <div class="row" >
+                            <div class="col-6">
+                                <div class="form-floating" >
+                                    <input type="text" class="form-control" formControlName="fullName" [(ngModel)]="contact.fullName" id="floatingInput" id="row" placeholder="foulen">
+                                    <label for="floatingInput">Full Name</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" formControlName="sub" [(ngModel)]="contact.sub" id="floatingInput" id="row" placeholder="subject">
+                                    <label for="floatingInput">Subject</label>
+                                </div>
+                            </div>
+                    </div>
+                        <div class="form-floating">
+                            <input type="email" class="form-control" formControlName="email" [(ngModel)]="contact.email" id="floatingPassword" placeholder="name@gmail.com">
+                            <label for="floatingPassword">Email</label>
+                            <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+                        </div>
+                        <div>
+                            <textarea name="message" formControlName="msg" [(ngModel)]="contact.msg" id="message" placeholder="your message"></textarea>
+                        </div>
+                </div>
+                <button class=" btn btn-lg btn-primary" type="submit" routerLink="/" (click)="contacter()">Send</button>
+                </form>
+            </main>
+        </div>
+    </div>
+    <div class="col-md-4 col-xs-12">
+        <div class="third">
+            <h4>Contact</h4>
+            <hr>
+            <ul>
+                <li><a href="http://www.uptech.com.tn" id="contact"> uptech.com.tn </a></li>
+                <li><a href="tel:+21636353039"id="contact"> +(216) 36 353 039 </a></li>
+                <li><a href="mailto:info@uptech.com.tn"id="contact"> contact@uptech.com.tn</a></li>
+                <li><a href="https://www.google.fr/maps/place/9+Avenue+Louis+Braille,+Tunis/@36.8208383,10.1831373,18z/data=!4m5!3m4!1s0x12fd3488eb032387:0x4121d20a1f82d896!8m2!3d36.8208366!4d10.1830679?hl=fr" target="_blank" id="contact"> Siège social : 9BIS LOUIS BRAILLE, 1002 Tunis </a></li>
+                <li><a href="https://goo.gl/maps/FtDMa7bDK8HAKaok8" target="_blank" id="contact"> Branche : Centre Urbain Nord-1082 Tunis</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div><br><br><br></div>
+
+

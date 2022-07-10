@@ -1,0 +1,28 @@
+<div class="container" *ngFor="let services of services">
+    <div class="row">
+        <div class="col-6">
+        <!-- <img src="assets/NoPath - Copy.png" id="model1" alt="model1"> -->
+        <img src='{{imgDirectoryPath}}{{services.file}}' crossorigin="anonymous" id="model1" alt="model1" >
+    </div>
+    <div class="col-6" id="p">
+        <div class="sp">
+            <p class="span"><span>{{services.categorie}}</span></p>
+            <p class="title1"><u>{{services.name}}</u></p>
+            <p class="price" *ngIf="token != null "><span>{{services.prix}}.TDN</span></p>
+            <p class="title2"><span id="title2">{{services.title}} </span></p>
+            <div class="information" id="information">
+              <p>{{services.descreption}}</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <label *ngIf="token != null">
+        <input type="checkbox"  (click)="isChecked($event, services._id)"/>
+        <span class="checkbox"></span>
+    </label>
+  </div>
+
+
+<!-- <app-web></app-web>
+<app-mobile></app-mobile> -->
+

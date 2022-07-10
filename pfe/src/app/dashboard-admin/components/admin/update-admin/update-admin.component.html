@@ -1,0 +1,30 @@
+<div class="container">
+    <!-- <button id="modalClose" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+    <div class="col-6" id="formC">
+        <main class="form-signin">
+            <form [formGroup]="Update">
+              <h1 class="h3 mb-3 fw-normal">Update</h1>
+              <div id="form">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" formControlName="name" [(ngModel)]="user.name" id="floatingPassword" placeholder="name@gmail.com">
+                        <label for="floatingPassword">Name</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" class="form-control"  formControlName="FamilyName" [(ngModel)]="user.FamilyName" id="floatingPassword" placeholder="name@gmail.com">
+                        <label for="floatingPassword">Family name</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="number" class="form-control" formControlName="PhoneNumber" [(ngModel)]="user.PhoneNumber" id="floatingPassword" placeholder="name@gmail.com">
+                        <label for="floatingPassword">Phone number</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="email" class="form-control" formControlName="email" [(ngModel)]="user.email"  id="floatingPassword" placeholder="name@gmail.com">
+                        <label for="floatingPassword">Email</label>
+                    </div>
+              </div>
+              <button class="btn btn-lg btn-primary" type="submit" [routerLink]="['/']" (click)="update(this.data._id)" >Update</button>
+            </form>
+            <!-- [routerLink]="['/user_profile']" -->
+        </main>
+    </div>
+</div>

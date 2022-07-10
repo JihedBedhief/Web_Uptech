@@ -1,0 +1,149 @@
+/* .container{
+    margin-top: 100px;
+    width: 2000px;
+    height: 800px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 19px );
+    -webkit-backdrop-filter: blur( 19px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    font-family: Arial Rounded MT;
+    color: white;
+  }  */
+  
+  
+  
+  #container{
+    font-family: Arial Rounded MT;
+    height: 660px;
+    overflow: auto;
+    margin-top: -208px;
+    margin-left: 620px;
+    position: relative;
+    animation: tablemove 1s ease;
+    
+} 
+@keyframes tablemove  {
+  from {
+    opacity: 0;
+    left: 100px;
+  }
+  to {
+    opacity: 1;
+    left: 0px;
+  }
+} 
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+
+  ::-webkit-scrollbar-thumb {
+    background: gray; 
+    border-radius: 10px;
+  }
+  
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: lime; 
+  } 
+
+  table{
+    font-family: Arial Rounded MT;
+    color: white;
+    font-size: 20px;
+  }
+
+h1{
+    font-family: Arial Rounded MT;
+}
+
+#button{
+  margin-right: 10px;
+}
+
+img{
+  width: 40px;
+  margin-right: 10px;
+}
+
+/* select{
+  color: black;
+  position: absolute;
+  margin-left: 777px;
+  margin-top: -75px;
+  background: transparent;
+  border: none;
+  border-bottom: solid gray;
+  width: 180px;
+}
+
+select option{
+  background: gray;
+} */
+
+.searchdiv{
+  position: absolute;
+  margin-left: 1256px;
+  margin-top: -65px;
+}
+
+input{
+  background-color: transparent;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  width: 242px;
+  border-radius: 5px;
+}
+
+img{
+  cursor: pointer;
+  width: 30px;
+
+}
+
+button{
+  border-color: lime;
+  background: transparent;
+}
+
+#button{
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  position: absolute;
+  margin-left: 1565px;
+  margin-top: -724px;
+  color: lime;
+  animation: btnmove 2s ease;
+}
+@keyframes btnmove  {
+  from {
+    opacity: 0;
+
+  }
+  to {
+    opacity: 1;
+
+  }
+} 
+
+
+svg{
+  position: absolute;
+  margin-left: -7px;
+  margin-top: -7px;
+}
+
+textarea{
+  height: 60px;
+}

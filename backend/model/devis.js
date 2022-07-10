@@ -6,7 +6,10 @@ const DevisSchema = new mongoose.Schema({
     type :mongoose.Schema.Types.ObjectId,
     ref : "User",
   },
-  services: [] ,
+  services: [{
+    type :mongoose.Schema.Types.ObjectId,
+    ref : "Service",
+  }] ,
   total :{
     type : Number,
   }
